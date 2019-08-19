@@ -12,7 +12,7 @@
         // Criando a classe
         class Carro {
             // declarando os atributos da classe
-            private $placa;
+            public $placa;
             private $qtdCombustivel;
             // rendimento padrão de +/- 10km/L
             private $rendimento;
@@ -61,9 +61,9 @@
         }
 
         echo '<div class="bg-light p-4 border border-dark">';
-            echo '<h3 class="display-4">Carro 1</h3>';
+        $carro1 = new Carro ('QFG-3921',20,12,50);
+            echo '<h3 class="display-4">Carro 1 ' . $carro1->placa . '</h3>';
                 echo '<div class="border border-dark p-4 text-monospace">';
-                $carro1 = new Carro ('QFG-3921',20,12,50);
                 $carro1->mostrarEstado();
                 $carro1->andar(12);
                 $carro1->mostrarEstado();
@@ -80,7 +80,7 @@
         // DIV CARRO 2
         echo '<div class="bg-light p-4 border border-dark">';
         $carro2 = new Carro ('FBA-8933',30,8,50);
-            echo '<h3 class="display-4"> Carro 2 </h3>';
+            echo '<h3 class="display-4"> Carro 2 ' . $carro2->placa . '</h3>';
                 echo '<div class="border border-dark p-4 text-monospace">';
                     $carro2->mostrarEstado();
                     $carro2->andar(15);
